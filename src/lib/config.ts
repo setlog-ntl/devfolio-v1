@@ -34,14 +34,14 @@ export interface ProjectItem {
 }
 
 const DEMO_SKILLS: SkillItem[] = [
-  { name: 'TypeScript', level: 90 },
-  { name: 'React',      level: 85 },
-  { name: 'Next.js',    level: 80 },
-  { name: 'Node.js',    level: 70 },
-  { name: 'Python',     level: 65 },
-  { name: 'Docker',     level: 60 },
-  { name: 'PostgreSQL', level: 60 },
-  { name: 'AWS',        level: 50 },
+  { name: 'TypeScript', level: 'intermediate' },
+  { name: 'React', level: 'beginner' },
+  { name: 'Next.js', level: 'intermediate' },
+  { name: 'Node.js', level: 'intermediate' },
+  { name: 'Python', level: 'intermediate' },
+  { name: 'Docker', level: 'intermediate' },
+  { name: 'PostgreSQL', level: 'intermediate' },
+  { name: 'AWS', level: 'intermediate' }
 ];
 
 const DEMO_EXPERIENCE: ExperienceItem[] = [
@@ -74,7 +74,7 @@ const DEMO_EXPERIENCE: ExperienceItem[] = [
     periodEn: '2019 - 2023',
     description: '컴퓨터공학 학사. 졸업 프로젝트: AI 기반 코드 리뷰 도구 개발.',
     descriptionEn: 'B.S. in Computer Science. Capstone: AI-powered code review tool.',
-  },
+  }
 ];
 
 const DEMO_PROJECTS: ProjectItem[] = [
@@ -154,7 +154,7 @@ export const siteConfig = {
     '안녕하세요! 웹 기술에 열정을 가진 풀스택 개발자입니다. React와 Next.js를 주로 사용하며, 오픈소스 프로젝트에 기여하는 것을 좋아합니다. 사용자 경험을 개선하고 깔끔한 코드를 작성하는 데 집중합니다.',
   aboutEn:
     process.env.NEXT_PUBLIC_ABOUT_EN ||
-    "Hi! I'm a full-stack developer passionate about web technologies. I primarily work with React and Next.js, and love contributing to open source projects. I focus on improving user experience and writing clean code.",
+    'Hi! I\'m a full-stack developer passionate about web technologies. I primarily work with React and Next.js, and love contributing to open source projects. I focus on improving user experience and writing clean code.',
   skills: parseJSON<SkillItem[]>(process.env.NEXT_PUBLIC_SKILLS, DEMO_SKILLS),
   experience: parseJSON<ExperienceItem[]>(process.env.NEXT_PUBLIC_EXPERIENCE, DEMO_EXPERIENCE),
   projects: DEMO_PROJECTS,
@@ -163,9 +163,9 @@ export const siteConfig = {
   email: process.env.NEXT_PUBLIC_EMAIL || 'dev@example.com',
   githubUrl: process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com',
   linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com',
-  typingWords: process.env.NEXT_PUBLIC_TYPING_WORDS || 'Full-stack Developer\nOpen Source Contributor\nTypeScript Enthusiast',
+  typingWords: 'Full-stack DevelopernOpen Source ContributornTypeScript Enthusiast',
   maxRepos: 6,
-  designPreset: (process.env.NEXT_PUBLIC_DESIGN_PRESET || 'github-dark') as 'github-dark' | 'vscode' | 'dracula',
+  designPreset: 'terminal',
   gaId: process.env.NEXT_PUBLIC_GA_ID || null,
 };
 
